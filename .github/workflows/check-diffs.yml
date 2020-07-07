@@ -20,7 +20,6 @@ jobs:
         echo 'xxxxxxxxxxx'
         pwd
         echo 'xxxxxxxxxxx'
-        cd ..
-        pwd
+        ls -a
         echo 'xxxxxxxxxxx'
         git diff ${GITHUB_BASE_REF}...
