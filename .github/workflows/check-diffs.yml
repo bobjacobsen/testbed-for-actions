@@ -16,8 +16,9 @@ jobs:
       run: |
         printenv 
         echo 'xxxxxxxxxxx'
-        ls -a
+        pwd
         echo 'xxxxxxxxxxx'
-        ls -a ..
+        cd ..
+        pwd
         echo 'xxxxxxxxxxx'
-        #git diff ${GITHUB_BASE_REF}...
+        git diff ${GITHUB_BASE_REF}...
