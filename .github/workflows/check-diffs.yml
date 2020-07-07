@@ -1,0 +1,17 @@
+# This workflow checks the diff between base branch and PR
+
+name: Check Diffs
+
+on: [ pull_request ]
+#  pull_request:
+#    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Show environment
+      run: |
+        printenv
