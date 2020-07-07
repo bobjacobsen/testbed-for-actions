@@ -14,4 +14,6 @@ jobs:
     steps:
     - name: Show environment
       run: |
-        printenv
+        printenv 
+        echo 'xxxxxxxxxxx'
+        git diff ${GITHUB_BASE_REF}...
