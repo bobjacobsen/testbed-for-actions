@@ -12,10 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout branch parent
-      uses: actions/checkout@v2
-      with:
-        ${GITHUB_BASE_REF}
     - name: Checkout repo current
       uses: actions/checkout@v2
     - name: Get changes from commits
@@ -24,6 +20,6 @@ jobs:
         echo 'xxxxxxxxxxx'
         pwd
         echo 'xxxxxxxxxxx'
-        ls -a
+        git fetch --unshallow
         echo 'xxxxxxxxxxx'
         git diff ${GITHUB_BASE_REF}...
