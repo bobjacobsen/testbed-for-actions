@@ -1,5 +1,7 @@
 # This workflow checks the diff between base branch and PR
 
+# https://github.com/actions/checkout
+#
 name: Check Diffs
 
 on: [ pull_request ]
@@ -14,12 +16,14 @@ jobs:
     steps:
     - name: Checkout repo current
       uses: actions/checkout@v2
+        fetch-depth: 0
     - name: Get changes from commits
       run: |
         printenv 
         echo 'xxxxxxxxxxx'
-        pwd
+        git status
         echo 'xxxxxxxxxxx'
-        git fetch --unshallow
+        git diff 
         echo 'xxxxxxxxxxx'
         git diff ${GITHUB_BASE_REF}...
+        echo 'xxxxxxxxxxx'
