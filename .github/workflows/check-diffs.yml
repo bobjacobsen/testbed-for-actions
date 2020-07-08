@@ -20,17 +20,5 @@ jobs:
         fetch-depth: 0
     - name: Get changes from commits
       run: |
-        printenv 
-        echo 'xxxxxxxxxxx'
-        /usr/bin/git status
-        echo 'xxxxxxxxxxx'
-        /usr/bin/git diff 
-        echo 'xxxxxxxxxxx'
-        /usr/bin/git branch -va
-        echo 'xxxxxxxxxxx'
-        echo git diff 542125a...
-        /usr/bin/git diff 542125a...
-        echo 'xxxxxxxxxxx'
-        echo /usr/bin/git diff remotes/origin/${GITHUB_BASE_REF}...
+        printenv
         /usr/bin/git diff remotes/origin/${GITHUB_BASE_REF}...
-        echo 'xxxxxxxxxxx'
