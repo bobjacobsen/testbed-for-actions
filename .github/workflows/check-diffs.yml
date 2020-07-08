@@ -26,5 +26,6 @@ jobs:
         echo 'xxxxxxxxxxx'
         git diff 
         echo 'xxxxxxxxxxx'
+        echo git diff ${GITHUB_BASE_REF}...
         git diff ${GITHUB_BASE_REF}...
         echo 'xxxxxxxxxxx'
