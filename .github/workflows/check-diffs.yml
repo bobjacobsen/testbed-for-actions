@@ -16,6 +16,7 @@ jobs:
     steps:
     - name: Checkout repo current
       uses: actions/checkout@v2
+      with:
         fetch-depth: 0
     - name: Get changes from commits
       run: |
