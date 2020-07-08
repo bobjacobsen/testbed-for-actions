@@ -26,7 +26,7 @@ jobs:
         echo 'xxxxxxxxxxx'
         /usr/bin/git diff 
         echo 'xxxxxxxxxxx'
-        /usr/bit/git branch -va
+        /usr/bin/git branch -va
         echo 'xxxxxxxxxxx'
         echo git diff 542125a...
         /usr/bin/git diff 542125a...
