@@ -1,5 +1,7 @@
 # This workflow checks the diff between base branch and PR
 
+# https://github.com/actions/checkout
+#
 name: Check Diffs
 
 on: [ pull_request ]
@@ -12,18 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout branch parent
-      uses: actions/checkout@v2
-      with:
-        ${GITHUB_BASE_REF}
     - name: Checkout repo current
       uses: actions/checkout@v2
-    - name: Show environment
+      with:
+        fetch-depth: 0
+    - name: Get changes from commits
       run: |
-        printenv 
-        echo 'xxxxxxxxxxx'
-        pwd
-        echo 'xxxxxxxxxxx'
-        ls -a
-        echo 'xxxxxxxxxxx'
-        git diff ${GITHUB_BASE_REF}...
+        printenv
+        /usr/bin/git diff remotes/origin/${GITHUB_BASE_REF}...
