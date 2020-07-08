@@ -22,10 +22,10 @@ jobs:
       run: |
         printenv 
         echo 'xxxxxxxxxxx'
-        git status
+        /usr/bin/git status
         echo 'xxxxxxxxxxx'
-        git diff 
+        /usr/bin/git diff 
         echo 'xxxxxxxxxxx'
         echo git diff ${GITHUB_BASE_REF}...
-        git diff ${GITHUB_BASE_REF}...
+        /usr/bin/git diff ${GITHUB_BASE_REF}...
         echo 'xxxxxxxxxxx'
